@@ -61,6 +61,7 @@ class CouchbaseChatClient:
 
         try:
             bucket = self.cluster.bucket(self.bucket_name)
+            self.scope = bucket.scope(self.scope_name)  # Ensure the scope is set
             collection_manager = bucket.collections()
 
             for coll in [self.messages_coll, self.chats_coll]:
@@ -71,12 +72,10 @@ class CouchbaseChatClient:
                     if "already exists" in str(e):
                         pass
                     else:
-                        logger.warning(
-                            f"Error creating collection {coll}: {str(e)}"
-                        )
+                        logger.warning(f"Error creating collection {coll}: {str(e)}")
 
-            self.chats = self.scope.collection(self.chats_coll)
-            self.messages = self.scope.collection(self.messages_coll)
+            self.messages = self.scope.collection(self.messages_coll)  # Initialize messages collection
+            self.chats = self.scope.collection(self.chats_coll)  # Initialize chats collection
 
             logger.info("Collections initialized successfully")
         except Exception as e:
