@@ -480,15 +480,19 @@ async def submit_feedback(
 @router.get("/messages/with-feedback", response_model=List[MessageResponse])
 async def get_messages_with_feedback(db: DbHandle) -> List[MessageResponse]:
     """Retrieve all messages that have received feedback."""
-    query = "SELECT META().id, content, metadata.feedback FROM `main` WHERE `metadata.feedback` IS NOT MISSING"
-    result = db.cluster.query(query)
+    try:
+        query = "SELECT META().id, content, metadata.feedback FROM `main` WHERE `metadata.feedback` IS NOT MISSING"
+        result = db.cluster.query(query)
 
-    messages_with_feedback = []
-    for row in result:
-        messages_with_feedback.append({
-            "id": row["id"],
-            "content": row["content"],
-            "feedback": row["metadata"]["feedback"]
-        })
+        messages_with_feedback = []
+        for row in result:
+            messages_with_feedback.append({
+                "id": row["id"],
+                "content": row["content"],
+                "feedback": row["metadata"]["feedback"]
+            })
 
-    return messages_with_feedback
+        return messages_with_feedback
+    except Exception as e:
+        logger.error(f"Error fetching messages with feedback: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch messages with feedback")
