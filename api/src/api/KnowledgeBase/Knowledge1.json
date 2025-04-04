@@ -1,0 +1,783 @@
+[
+  {
+    "id": "kb-001",
+    "title": "The demo mode has been activated.",
+    "content": "1. Disconnect the appliance from the power supply for 30 seconds by briefly switching off the circuit breaker in the fuse box.  2. Touch any control on the cooktop within the next three minutes.",
+    "category": "Question",
+    "tags": [
+      "demo",
+      "breaker",
+      "cooktop"
+    ]
+  },
+  {
+    "id": "kb-002",
+    "title": "The cooktop is unable to connect to your home network or to the hood.",
+    "content": "1. Switch the appliance off and on again.      -  If the fault/error was a one-off occurrence, the message will disappear.      -  If the message appears again, call Bosch Customer Support at  1-800-944-2904  and specify the exact error code when calling.",
+    "category": "Question",
+    "tags": [
+      "cooktop",
+      "connect",
+      "network",
+      "hood",
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-003",
+    "title": "The supply voltage is incorrect. It is outside the normal operating range.",
+    "content": "Contact your electrical utility provider or contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "voltage",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-004",
+    "title": "The cooking zone has overheated. It has switched off to protect the work surface.",
+    "content": "1. Wait until the electronics have cooled down sufficiently.  2. Switch the cooking zone back on and you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat"
+    ]
+  },
+  {
+    "id": "kb-005",
+    "title": "The electronics have overheated. The corresponding cooking zone has switched off.",
+    "content": "1. Wait until the electronics have cooled down sufficiently.  2. Touch any control element on the cooktop.  3. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "cooktop",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-006",
+    "title": "There is hot cookware near the control panel. The electronics are at risk of overheating.",
+    "content": "Remove the cookware from the control panel and you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat"
+    ]
+  },
+  {
+    "id": "kb-007",
+    "title": "There is hot cookware near the control panel. The cooking zone has switched off to protect the electronics.",
+    "content": "1. Remove the cookware from the control panel.  2. Wait a few seconds.  3. Touch any control element on the cooktop.  4. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "cooktop",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-008",
+    "title": "The cooking zone has been operating continuously for an extended period of time without interaction. The automatic time limitation has been triggered.",
+    "content": "1. Simply touch any control element on the cooktop.  2. You can set the cooking zone and continue to cook.",
+    "category": "Question",
+    "tags": [
+      "cooktop"
+    ]
+  },
+  {
+    "id": "kb-009",
+    "title": "The supply voltage is incorrect. It is outside the normal operating range.",
+    "content": "Contact your electrical utility provider or contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "voltage",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-010",
+    "title": "The demo mode has been activated.",
+    "content": "\"1. Disconnect the appliance from the power supply for 30 seconds by switching off the circuit breaker or fuse in the electrical panel.  2. Touch any control element on the cooktop within the next 3 minutes.\"",
+    "category": "Question",
+    "tags": [
+      "demo",
+      "breaker",
+      "fuse",
+      "cooktop"
+    ]
+  },
+  {
+    "id": "kb-011",
+    "title": "There is an operational fault/error.",
+    "content": "1. Switch the appliance off and on again.      -  If the fault/error was a one-off occurrence, the message will disappear.      -  If the message appears again, call Bosch Customer Support at  1-800-944-2904  and specify the exact error code when calling.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-012",
+    "title": "The electronics have overheated. The corresponding cooking zone has been switched off.",
+    "content": "1. Wait until the electronics have cooled down sufficiently.  2. Touch any control element on the cooktop.  3. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "cooktop",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-013",
+    "title": "The electronics have overheated. All cooking zones have switched off.",
+    "content": "1. Wait until the electronics have cooled down sufficiently.  2. Touch any control element on the cooktop.  3. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "cooktop",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-014",
+    "title": "There is hot cookware near the control panel. The electronics are at risk of overheating.",
+    "content": "Remove the cookware from the control panel and you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat"
+    ]
+  },
+  {
+    "id": "kb-015",
+    "title": "There is hot cookware near the control panel. The cooking zone has switched off to protect the electronics.",
+    "content": "1. Remove the cookware from the control panel.  2. Wait a few seconds.  3. Touch any control element on the cooktop.  4. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "cooktop",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-016",
+    "title": "The cooking zone has been operating continuously for an extended period of time without interaction. The automatic time limitation has been triggered.",
+    "content": "1. Touch any control element on the cooktop.  2. You can set the cooking zone and continue to cook.",
+    "category": "Question",
+    "tags": [
+      "cooktop"
+    ]
+  },
+  {
+    "id": "kb-017",
+    "title": "The supply voltage is incorrect. It is outside the normal operating range.",
+    "content": "Contact your electrical utility provider or contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "voltage",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-018",
+    "title": "There is an electronics fault or error.",
+    "content": "1. Disconnect the appliance from the power supply.  2. Wait a couple of seconds and reconnect the appliance to the power supply.  3. If the message persists, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-019",
+    "title": "The electronics have overheated.",
+    "content": "Turn all burners off or use the minimum power level until the electronic system has cooled down sufficiently.",
+    "category": "Question",
+    "tags": [
+      "overheat"
+    ]
+  },
+  {
+    "id": "kb-020",
+    "title": "There is a heat pump motor circuit fault at the main control board.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "motor",
+      "circuit",
+      "breaker",
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-021",
+    "title": "There is a main control board relay fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-022",
+    "title": "There is a main control board relay fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-023",
+    "title": "There is a wash arm diverter circuit in main control board fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "circuit",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-024",
+    "title": "There is a door sensor circuit fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "circuit",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-025",
+    "title": "The Zeolite (Crystal Dry) fan motor is defective.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "zeolite",
+      "crystalDry",
+      "motor",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-026",
+    "title": "There is a heat pump internal heater fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "heater",
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-027",
+    "title": "There is a Zeolite (Crystal Dry) chamber heater fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "zeolite",
+      "crystalDry",
+      "heater",
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-028",
+    "title": "There is limescale build-up in the heat pump.",
+    "content": "The dishwasher needs to be descaled. The Bosch descaler can be used to descale your dishwasher.  Dishwashers are used on a regular basis which means that limescale can build up quickly, especially in hard water areas. To help your dishwasher work efficiently and effectively, and to ensure your dishes come out clean, regular descaling is important.  To help avoid this issue in the future, use softening salt in your dishwasher if it comes with a water softener function.  Purchase the Bosch descaler  here  and purchase softening salt  here .",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "dishwasher",
+      "water",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-029",
+    "title": "There is a flow meter failure or an issue with water flowing into the dishwasher or the filling system.",
+    "content": "Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "flow",
+      "water",
+      "dishwasher",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-030",
+    "title": "The safety switch has detected water in the base of the dishwasher. Your leakage protection system has been activated.",
+    "content": "Please turn off the water inflow and contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "water",
+      "dishwasher",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-031",
+    "title": "There is an issue with water flowing into the dishwasher or the filling system. The water may not be able to enter the dishwasher.",
+    "content": "Check the inlet hose and make sure it isn't kinked or damaged. For further assistance on how to troubleshoot your dishwasher, contact Bosch Customer Support at  1-800-944-2904 .",
+    "category": "Question",
+    "tags": [
+      "water",
+      "dishwasher",
+      "inlet",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-032",
+    "title": "There is an issue with water flow into the dishwasher. The water level is too low, or water is not being pumped correctly.",
+    "content": "1. Check the inlet hose and make sure it isn't kinked or damaged.  2. Make sure the water supply is turned on. The water flow rate should be 10 l/min.    For further assistance, please contact Bosch Customer Support at  1-800-944-2904 .",
+    "category": "Question",
+    "tags": [
+      "water",
+      "flow",
+      "dishwasher",
+      "inlet",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-033",
+    "title": "There is a detergent dispenser solenoid circuit fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "circuit",
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-034",
+    "title": "There is a heat pump internal heater fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "heater",
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-035",
+    "title": "The heat pump is blocked.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-036",
+    "title": "This error code could be caused by a number of issues — please check the following:",
+    "content": "The dishwasher filter is blocked. The filter is the area where food particles get caught and it needs to be cleaned regularly.   1.\tRemove and wash the filter under running water with mild soap and a soft brush to remove debris then reinstall.  View full instructions on how to clean your dishwasher filter  here.  To learn more, view our 'How to Clean Your Dishwasher Filter' video on our  How-to Video page .     The drain pump is blocked or the drain pump cover is loose.   1.\tRemove the drain pump cover.  2.\tClean the drain pump by removing standing water and loose debris.  3.\tReplace the drain pump cover, making sure it clicks into place. This ensures it is completely closed.   View this video to learn more .      The drain pump hose is kinked or sharply bent.   1.\tCheck the drain pump hose and make sure it is not bent or kinked.   View this video to learn more .      The airgap or drain hose may be clogged with debris.   1.\tTurn off the appliance and check the airgap.  2.\tDisconnect the drain hose and place hose in a bucket.  3.\tClear debris from the hose and reconnect it.  4.\tTurn on the appliance and start a rinse cycle to test functionality.    If the issue still exists, please Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "dishwasher",
+      "drain",
+      "pump",
+      "water",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-037",
+    "title": "There is an issue with the drain pump. This happens when the drain pump is blocked, clogged, or faulty.",
+    "content": "Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "drain",
+      "pump",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-038",
+    "title": "This error code could be caused by a number of issues — please check the following:",
+    "content": "The drain pump is blocked or the drain pump cover is loose.   1.\tRemove the drain pump cover.  2.\tClean the drain pump by removing standing water and loose debris.  3.\tReplace the drain pump cover, making sure it clicks into place. This ensures it is completely closed.   View this video to learn more .      The drain pump hose is kinked or sharply bent.   1.\tCheck the drain pump hose and make sure it is not bent or kinked.   View this video to learn more .      The airgap or drain hose may be clogged with debris.   1.\tTurn off the appliance and check the airgap.  2.\tDisconnect the drain hose and place hose in a bucket.  3.\tClear debris from the hose and reconnect it.  4.\tTurn on the appliance and start a rinse cycle to test functionality.    If the issue still exists, please Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "drain",
+      "pump",
+      "water",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-039",
+    "title": "This error code could be caused by a number of issues — please check the following:",
+    "content": "The drain pump is blocked or the drain pump cover is loose.   1.\tRemove the drain pump cover.  2.\tClean the drain pump by removing standing water and loose debris.  3.\tReplace the drain pump cover, making sure it clicks into place. This ensures it is completely closed.   View this video to learn more .      The drain pump hose is kinked or sharply bent.   1.\tCheck the drain pump hose and make sure it is not bent or kinked.   View this video to learn more .      The airgap or drain hose may be clogged with debris.   1.\tTurn off the appliance and check the airgap.  2.\tDisconnect the drain hose and place hose in a bucket.  3.\tClear debris from the hose and reconnect it.  4.\tTurn on the appliance and start a rinse cycle to test functionality.    If the issue still exists, please Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "drain",
+      "pump",
+      "water",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-040",
+    "title": "The house power supply to the unit is too low.",
+    "content": "Reset power to breaker for 30 seconds.If the error occurs again, contact an electrician to check incoming voltage to the appliance.",
+    "category": "Question",
+    "tags": [
+      "supply",
+      "breaker",
+      "error",
+      "voltage"
+    ]
+  },
+  {
+    "id": "kb-041",
+    "title": "The demo mode has been activated.",
+    "content": "1. Disconnect the appliance from the power supply for 30 seconds by switching off the circuit breaker or fuse in the electrical panel.  2. Touch any control on the appliance within the next 3 minutes.",
+    "category": "Question",
+    "tags": [
+      "demo",
+      "breaker",
+      "fuse",
+      "supply"
+    ]
+  },
+  {
+    "id": "kb-042",
+    "title": "The supply voltage is incorrect. It is outside the normal operating range.",
+    "content": "Contact your electrical utility provider or contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "voltage",
+      "supply",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-043",
+    "title": "The appliance is not connected properly.",
+    "content": "1. Disconnect the appliance from the power supply.  2. Make sure the appliance has been connected as shown in the circuit diagram.",
+    "category": "Question",
+    "tags": [
+      "supply",
+      "circuit"
+    ]
+  },
+  {
+    "id": "kb-044",
+    "title": "The cooking zone has overheated. It has switched off to protect the work surface.",
+    "content": "1. Wait until the electronics have cooled down sufficiently.  2. Switch the cooking zone back on and you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat"
+    ]
+  },
+  {
+    "id": "kb-045",
+    "title": "The electronics have overheated. The corresponding cooking zone has been switched off.",
+    "content": "1. Wait until the electronics have cooled down sufficiently.  2. Touch any control element on the appliance.  3. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-046",
+    "title": "There is hot cookware near the control panel. The electronics are at risk of overheating.",
+    "content": "Remove the cookware from the control panel and you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat"
+    ]
+  },
+  {
+    "id": "kb-047",
+    "title": "There is hot cookware near the control panel. The cooking zone has switched off to protect the electronics.",
+    "content": "1. Remove the cookware from the control panel.  2. Wait a few seconds.  3. Touch any control element on the appliance.  4. When the error message disappears and the electronics have cooled down sufficiently, you can continue to cook.",
+    "category": "Question",
+    "tags": [
+      "overheat",
+      "error"
+    ]
+  },
+  {
+    "id": "kb-048",
+    "title": "The cooking zone has been operating continuously for an extended period of time without interaction. The automatic time limitation has been triggered.",
+    "content": "1. Simply touch any control element on the cooktop.  2. You can set the cooking zone and continue to cook.",
+    "category": "Question",
+    "tags": [
+      "cooktop"
+    ]
+  },
+  {
+    "id": "kb-049",
+    "title": "The supply voltage is incorrect. It is outside the normal operating range.",
+    "content": "Contact your electrical utility provider or contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "voltage",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-050",
+    "title": "An electronics fault or error has occurred.",
+    "content": "1. Press any button to stop the beeping.  2. Reset the oven if necessary.  3. Call Bosch Customer Support at  1-800-944-2904  for assistance or to book a service visit.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-051",
+    "title": "An electronics fault or error has occurred.",
+    "content": "1. Press any button to stop the beeping.  2. Reset the oven if necessary.  3. Call Bosch Customer Support at  1-800-944-2904  for assistance or to book a service visit.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-052",
+    "title": "An electronics fault or error has occurred.",
+    "content": "1. Disconnect the appliance from the power supply.  2. Wait a couple of seconds and reconnect the appliance to the power supply.  3. If the message persists, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "supply",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-053",
+    "title": "The touch keys are not operating properly. This may be due to condensation on the keypad.",
+    "content": "1. Clean the control panel with a dry cloth.   2. Disconnect the appliance from the power supply by switching off the fuse in the fuse box and switch it back on after 10 seconds.",
+    "category": "Question",
+    "tags": [
+      "condensation",
+      "supply",
+      "fuse"
+    ]
+  },
+  {
+    "id": "kb-054",
+    "title": "A malfunction has occurred. Note any error codes that may appear on the display.",
+    "content": "Disconnect the appliance from the power supply by switching off the fuse in the fuse box and call Bosch Customer Support at  1-800-944-2904  for assistance or to book a service visit.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "supply",
+      "fuse",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-055",
+    "title": "This is a fault/error code.",
+    "content": "1. Press any button to stop beeping.   2. Reset oven if necessary.   3. If the error code continues to show up, turn off the oven and call Bosch Customer Support at  1-800-944-2904  for assistance with the error code or to book a service visit.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-056",
+    "title": "The icemaker is faulty or the ice water system controls have a communiciation issue.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "water",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-057",
+    "title": "There is a dispenser user interface fault/error.",
+    "content": "Reset power to breaker for 30 seconds. If not resolved, call Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "breaker",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-058",
+    "title": "If “Fill Tank Symbol” and “Descale Symbol” flash simultaneously and you are unable to prepare a drink, an error has occurred.",
+    "content": "Turn the machine off. Wait 5 minutes and turn the machine back on. If both symbols are still flashing, please contact the Bosch Customer Support Team at  1-800-701-5231  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-059",
+    "title": "The Child Lock is activated.",
+    "content": "Please review your owner's manual to learn how to deactivate the child lock for your washer. To download a copy of your manual, click  here .",
+    "category": "Question",
+    "tags": [
+      "childLock",
+      "washer"
+    ]
+  },
+  {
+    "id": "kb-060",
+    "title": "The pump is blocked (obstructed).",
+    "content": "Clean the washer drain hose and/or the drain pipe. You may also need to perform pump maintenance to clear the blockage (see your owner's manual to learn how to do this). Click  here  to find your owner's manual.",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "washer",
+      "drain"
+    ]
+  },
+  {
+    "id": "kb-061",
+    "title": "The pump for the intelligent dosing system is blocked.",
+    "content": "Put your appliance in standby mode and clean the pump unit. Find your owner's manual  here  for in-depth instructions on how to clean the pump unit.    Once clean, switch your washing machine back on. If the error code displays again or the program cannot be started, contact Bosch Customer Support at  1-800-944-2904  for assistance.    You can also deactivate the intelligent dosing system manually until the problem is fixed. Click  here  to find your owner’s manual and learn how.",
+    "category": "Question",
+    "tags": [
+      "pump",
+      "washer",
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-062",
+    "title": "The door is not locked properly.",
+    "content": "Close the door properly (clicks audibly). In particular, a full load may prevent the door from closing properly. Check whether there is something jammed between the door and housing. Restart the program.",
+    "category": "Question",
+    "tags": []
+  },
+  {
+    "id": "kb-063",
+    "title": "The filters in the water connection or AquaStop hose are blocked or the water pressure is too low.",
+    "content": "1. Clean the filters in the water supply hose. Attention: The AquaStop safety device contains an electric valve so do not immerse in water. Instructions: 1. Turn the tap off. 2. Take the hose off the tap. 3. Clean the filters using a small brush. 4. For appliances without an AquaStop, remove the hose from the back of the appliance. Take out the filter with pliers and clean it. 5. Reconnect the hose and check for leaks.    2. Fully turn on the tap and approximately 2.5 gallons (10 liters) of water per minute must flow out of the fully open tap. Contact your plumber if the water pressure is too low.",
+    "category": "Question",
+    "tags": [
+      "water",
+      "tap",
+      "supply"
+    ]
+  },
+  {
+    "id": "kb-064",
+    "title": "The drainage hose is blocked or kinked.",
+    "content": "1. Clean the filters in the water supply hose. Attention: The leaking water may be very hot with a risk of scalding. Set program to OFF. Pull out the main plug. Check whether the drainage hose has been installed without kinks. Loosen the hose clip on the siphon and carefully remove drainage hose and any residual water. Clean drainage hose and siphon spigot. Hold drainage hose in a bucket and select the DRAIN program. Connect drainage hose to the siphon and check for leaks.    2.Clean the pump. Attention: The leaking water may be very hot with a risk of scalding. Set program to OFF. Pull out the main plug. Open and remove service flap. Drain any water through the drainage hose by slowly removing the pump cover. Clean the interior, pump cover thread and pump housing. The impeller wheel of the pump must be able to turn. Re-insert the pump cover and screw on firmly. To check for leaks, pour 1 quart (1 liter) of water into the detergent dispenser. Check for leaks and then start the DRAIN program.",
+    "category": "Question",
+    "tags": [
+      "drain",
+      "pump",
+      "water",
+      "supply"
+    ]
+  },
+  {
+    "id": "kb-065",
+    "title": "An imbalance is detected. If the imbalance is too large, the spin cycle will not run or it will reduce its speed to protect your appliance. In addition, the appliance will attempt to improve distribution of the laundry by several spin attempts. This will extend the program running time.",
+    "content": "Please wash large and small items together to reduce the imbalance. Make sure to close zippers and buttons on pillows and duvet covers.",
+    "category": "Question",
+    "tags": []
+  },
+  {
+    "id": "kb-066",
+    "title": "Detergent foam has been detected. Too much detergent or an old detergent was used. This may cause excessive foaming from the detergent compartment. This may happen when washing lightly soiled items.",
+    "content": "Reduce the amount of detergent. In particular, when washing slightly soiled laundry, the amount of detergent should be reduced. Information on the amount of detergent to use can be found on the detergent packaging.",
+    "category": "Question",
+    "tags": []
+  },
+  {
+    "id": "kb-067",
+    "title": "There's a fault/error in the drive circuit.",
+    "content": "Faults can only be eliminated by an authorized technician. Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "circuit",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-068",
+    "title": "H9E and a water tap icon is shown",
+    "content": "This error code could be caused by a number of issues - please check the following:     The hot water tap is not turned on.   Confirm hot water hose is correctly connected and turn on the hot water tap.     The supply hose for hot water is kinked or pinched closed.   Eliminate the kink or blockage. Replace the hose if damaged.     The hot water pressure is too low.   Check the hot water pressure and fix if needed.     The strainer in the water supply hose is clogged.   Clean out the strainers in the supply hose.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "water",
+      "tap",
+      "supply"
+    ]
+  },
+  {
+    "id": "kb-069",
+    "title": "Lthe lnt filter is blocked and needs to be cleaned.",
+    "content": "Clean the lint filter after each drying cycle. Occasionally rinse out the lint and fluff filter with warm water.",
+    "category": "Question",
+    "tags": [
+      "water"
+    ]
+  },
+  {
+    "id": "kb-070",
+    "title": "There is a fault/eror detected with the heating circuit.",
+    "content": "This fault can only be eliminated by an authorized technician. Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "heater",
+      "circuit",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-071",
+    "title": "There is an electronics fault/error.",
+    "content": "This fault can only be eliminated by an authorized technician. Contact Bosch Customer Support at  1-800-944-2904  for assistance.",
+    "category": "Question",
+    "tags": [
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "kb-072",
+    "title": "Home Connect",
+    "content": "For Home Connect related error codes, please click  here .",
+    "category": "Question",
+    "tags": [
+      "connect"
+    ]
+  }
+]
