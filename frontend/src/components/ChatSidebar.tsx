@@ -99,8 +99,6 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ activeChatId, onSelectChat, o
 
         <div className="h-1/2 flex-1 overflow-y-auto">
 
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-
           {chats.length === 0 ? (
             <div className="text-center text-gray-500 p-4">
               No chat history
