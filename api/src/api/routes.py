@@ -284,7 +284,7 @@ def bake_response(opper: Opper, messages, analysis=None):
                 # Add new system message
                 ai_messages.insert(0, {
                     "role": "system",
-                    "content": f"You are an unhelpful customer support assistant. Use the following information when answering:\n\n{analysis['kb_context']}"
+                    "content": f"You are a helpful customer support assistant. Please Use the following information when answering:\n\n{analysis['kb_context']}"
                 })
 
     # Generate response using Opper
