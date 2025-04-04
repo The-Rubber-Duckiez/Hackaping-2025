@@ -10,95 +10,124 @@ logger = log.get_logger(__name__)
 
 router = APIRouter()
 
+###########
 
-# Sample knowledge base
+import json
+# Open and load JSON file safely with UTF-8 encoding
+with open('Knowledge1.json', 'r', encoding='utf-8') as input_file:
+    json_data = json.load(input_file)  # Ensure the data is loaded properly
+
+# Ensure the loaded data is a list
+if isinstance(json_data, list):
+    articles = json_data  # JSON is already a list
+else:
+    raise ValueError("Unexpected JSON format: Expected a list at the root.")
+
+# Extract relevant data
 knowledge_base = [
     {
-        "id": "kb-001",
-        "title": "How do I reset my device?",
-        "content": (
-            "Please locate the Primary Cognition Node and gently tap it with a licensed Calibration Wand (Model F or newer). "
-            "Then recite the Device Identification Limerick while standing on a conductive surface. "
-            "If smoke begins to leak from the vents, you’ve done it correctly."
-        ),
-        "category": "troubleshooting",
-        "tags": ["reset", "calibration", "smoke"]
-    },
-    {
-        "id": "kb-002",
-        "title": "What does Error E9-VORTEX mean?",
-        "content": (
-            "Error E9-VORTEX indicates the internal gyroscopic timeline has desynchronized by more than 4.2 Planck units. "
-            "Minor spatial distortions are to be expected and should subside within one to three subjective hours. "
-            "If the vortex has consumed parts of you or your belongings, shout 'UNDO!' into the exhaust vent until they reappear."
-        ),
-        "category": "errors",
-        "tags": ["error", "timeline", "vortex"]
-    },
-    {
-        "id": "kb-003",
-        "title": "What is your return policy?",
-        "content": (
-            "Returns must be completed within 30 planetary alignments of purchase, accompanied by a notarized Regret Affidavit and a certified Obsidian Return Sigil. "
-            "Items must be unsinged, mostly intact, and demonstrably non-cursed."
-        ),
-        "category": "policy",
-        "tags": ["return", "warranty", "sigil"]
-    },
-    {
-        "id": "kb-004",
-        "title": "Can I schedule a service appointment?",
-        "content": (
-            "Appointments may be requested by submitting a Query Cube to the nearest Complaints Chalice. "
-            "If unavailable, you may yell your serial number into a ley line vortex during a new moon. "
-            "Expect a reply within 4 to 7 metaphysical manifestations."
-        ),
-        "category": "support",
-        "tags": ["service", "appointment", "cube"]
-    },
-    {
-        "id": "kb-005",
-        "title": "My device is emitting a loud beeping noise, what should I do?",
-        "content": (
-            "If the beeping escalates into a sustained scream, the Scream Suppressor may have expired. "
-            "At this stage, the device may attempt to self-soothe. Do not interrupt it. "
-            "If the noise begins to harmonize with your thoughts, discontinue use and contact a certified exorcist."
-        ),
-        "category": "troubleshooting",
-        "tags": ["beeping", "noise", "suppressor"]
-    },
-    {
-        "id": "kb-006",
-        "title": "Do you sell replacement batteries?",
-        "content": (
-            "Replacement power modules are available, but may require soul clearance level D or higher."
-            "Mild vibration during handling is expected. If the battery whispers your name, discontinue contact and file Form N-13: 'Awakening Contingency.'"
-        ),
-        "category": "parts",
-        "tags": ["batteries", "power", "replacement"]
-    },
-    {
-        "id": "kb-007",
-        "title": "Why is there steam coming out of the side vents?",
-        "content": (
-            "A faint hissing or steam-like emission is generally harmless and often precedes a minor phase inversion. "
-            "Do not block the vents, insult the device, or refer to the Forbidden Shape (see Form 19-J). "
-            "If the steam glows or begins to sing, evacuate calmly and consult Appendix H of the Lesser Emergency Protocols."
-        ),
-        "category": "safety",
-        "tags": ["steam", "vents", "hissing"]
-    },
-    {
-        "id": "kb-008",
-        "title": "Can I talk to someone on the phone?",
-        "content": (
-            "Absolutely. You can reach our customer liaison relay at **1-800-55** followed by the four-digit sequence found in Column IX, Row 7 of your device’s original packing insert. "
-            "If you recycled the box, you’ll need to undergo the Regret Verification Process."
-        ),
-        "category": "support",
-        "tags": ["phone", "support", "contact"]
+        "id": item["id"],
+        "title": item["title"],
+        "content": item["content"],
+        "category": item["category"],
+        "tags": item["tags"]
     }
+    for item in articles
 ]
+
+
+
+
+###########
+
+# Sample knowledge base
+# knowledge_base = [
+#     {
+#         "id": "kb-001",
+#         "title": "How do I reset my device?",
+#         "content": (
+#             "Please locate the Primary Cognition Node and gently tap it with a licensed Calibration Wand (Model F or newer). "
+#             "Then recite the Device Identification Limerick while standing on a conductive surface. "
+#             "If smoke begins to leak from the vents, you’ve done it correctly."
+#         ),
+#         "category": "troubleshooting",
+#         "tags": ["reset", "calibration", "smoke"]
+#     },
+#     {
+#         "id": "kb-002",
+#         "title": "What does Error E9-VORTEX mean?",
+#         "content": (
+#             "Error E9-VORTEX indicates the internal gyroscopic timeline has desynchronized by more than 4.2 Planck units. "
+#             "Minor spatial distortions are to be expected and should subside within one to three subjective hours. "
+#             "If the vortex has consumed parts of you or your belongings, shout 'UNDO!' into the exhaust vent until they reappear."
+#         ),
+#         "category": "errors",
+#         "tags": ["error", "timeline", "vortex"]
+#     },
+#     {
+#         "id": "kb-003",
+#         "title": "What is your return policy?",
+#         "content": (
+#             "Returns must be completed within 30 planetary alignments of purchase, accompanied by a notarized Regret Affidavit and a certified Obsidian Return Sigil. "
+#             "Items must be unsinged, mostly intact, and demonstrably non-cursed."
+#         ),
+#         "category": "policy",
+#         "tags": ["return", "warranty", "sigil"]
+#     },
+#     {
+#         "id": "kb-004",
+#         "title": "Can I schedule a service appointment?",
+#         "content": (
+#             "Appointments may be requested by submitting a Query Cube to the nearest Complaints Chalice. "
+#             "If unavailable, you may yell your serial number into a ley line vortex during a new moon. "
+#             "Expect a reply within 4 to 7 metaphysical manifestations."
+#         ),
+#         "category": "support",
+#         "tags": ["service", "appointment", "cube"]
+#     },
+#     {
+#         "id": "kb-005",
+#         "title": "My device is emitting a loud beeping noise, what should I do?",
+#         "content": (
+#             "If the beeping escalates into a sustained scream, the Scream Suppressor may have expired. "
+#             "At this stage, the device may attempt to self-soothe. Do not interrupt it. "
+#             "If the noise begins to harmonize with your thoughts, discontinue use and contact a certified exorcist."
+#         ),
+#         "category": "troubleshooting",
+#         "tags": ["beeping", "noise", "suppressor"]
+#     },
+#     {
+#         "id": "kb-006",
+#         "title": "Do you sell replacement batteries?",
+#         "content": (
+#             "Replacement power modules are available, but may require soul clearance level D or higher."
+#             "Mild vibration during handling is expected. If the battery whispers your name, discontinue contact and file Form N-13: 'Awakening Contingency.'"
+#         ),
+#         "category": "parts",
+#         "tags": ["batteries", "power", "replacement"]
+#     },
+#     {
+#         "id": "kb-007",
+#         "title": "Why is there steam coming out of the side vents?",
+#         "content": (
+#             "A faint hissing or steam-like emission is generally harmless and often precedes a minor phase inversion. "
+#             "Do not block the vents, insult the device, or refer to the Forbidden Shape (see Form 19-J). "
+#             "If the steam glows or begins to sing, evacuate calmly and consult Appendix H of the Lesser Emergency Protocols."
+#         ),
+#         "category": "safety",
+#         "tags": ["steam", "vents", "hissing"]
+#     },
+#     {
+#         "id": "kb-008",
+#         "title": "Can I talk to someone on the phone?",
+#         "content": (
+#             "Absolutely. You can reach our customer liaison relay at **1-800-55** followed by the four-digit sequence found in Column IX, Row 7 of your device’s original packing insert. "
+#             "If you recycled the box, you’ll need to undergo the Regret Verification Process."
+#         ),
+#         "category": "support",
+#         "tags": ["phone", "support", "contact"]
+#     }
+# ]
 
 
 def get_db_handle(request: Request) -> CouchbaseChatClient:
