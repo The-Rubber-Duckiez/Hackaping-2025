@@ -446,3 +446,33 @@ async def delete_chat(
         raise HTTPException(status_code=500, detail="Failed to delete chat")
 
     return MessageResponse(message=f"Chat {chat_id} deleted successfully")
+
+class FeedbackRequest(BaseModel):
+    message_id: int
+    feedback: Literal["upvote", "downvote", "answered"]
+
+@router.post("/messages/feedback", response_model=MessageResponse)
+async def submit_feedback(
+    request: FeedbackRequest,
+    db: DbHandle,
+) -> MessageResponse:
+    """Submit feedback for a specific message."""
+    # Fetch the message document from Couchbase
+    message = db.messages.get(f"{request.message_id}")
+    if not message:
+        raise HTTPException(status_code=404, detail="Message not found")
+
+    # Initialize metadata and feedback if missing
+    if "metadata" not in message:
+        message["metadata"] = {}
+    if "feedback" not in message["metadata"]:
+        message["metadata"]["feedback"] = {"upvote": 0, "downvote": 0, "answered": 0}
+
+    # Increment the feedback count
+    feedback_type = request.feedback
+    message["metadata"]["feedback"][feedback_type] += 1
+
+    # Update the document in Couchbase
+    db.messages.upsert(f"{request.message_id}", message)
+
+    return MessageResponse(message="Feedback submitted successfully")

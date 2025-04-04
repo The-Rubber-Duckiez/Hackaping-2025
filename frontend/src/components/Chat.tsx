@@ -8,6 +8,20 @@ interface ChatProps {
   client: ApiClientRest;
 }
 
+const sendFeedback = async (messageId: number, feedback: string) => {
+  try {
+    await fetch('/api/messages/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message_id: messageId, feedback }),
+    });
+    alert('Feedback submitted successfully!');
+  } catch (error) {
+    console.error('Error submitting feedback:', error);
+    alert('Failed to submit feedback.');
+  }
+};
+
 const Chat: React.FC<ChatProps> = ({ chatId, client }) => {
   const chatApi = useMemo(() => createChatApi(client), [client]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -131,6 +145,33 @@ const Chat: React.FC<ChatProps> = ({ chatId, client }) => {
     );
   };
 
+  const renderMessageActions = (message: Message) => {
+    if (message.role !== 'bot') return null;
+
+    return (
+      <div className="flex gap-2 mt-2">
+        <button
+          className="btn btn-sm btn-success"
+          onClick={() => sendFeedback(message.id!, 'upvote')}
+        >
+          Upvote
+        </button>
+        <button
+          className="btn btn-sm btn-error"
+          onClick={() => sendFeedback(message.id!, 'downvote')}
+        >
+          Downvote
+        </button>
+        <button
+          className="btn btn-sm btn-info"
+          onClick={() => sendFeedback(message.id!, 'answered')}
+        >
+          This answered my question
+        </button>
+      </div>
+    );
+  };
+
   return (
     <div className="flex-1 flex flex-col h-full">
       <div className="flex-1 p-4 overflow-y-auto">
@@ -173,6 +214,8 @@ const Chat: React.FC<ChatProps> = ({ chatId, client }) => {
                     {selectedMessageIndex === index && showSources && renderSources(message.sources)}
                   </>
                 )}
+
+                {renderMessageActions(message)}
               </div>
             ))}
             <div ref={messagesEndRef} />
