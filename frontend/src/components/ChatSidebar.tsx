@@ -10,6 +10,7 @@ interface ChatSidebarProps {
 
 const ChatSidebar: React.FC<ChatSidebarProps> = ({ activeChatId, onSelectChat, onNewChat }) => {
   const [chats, setChats] = useState<StoredChatSession[]>([]);
+  const [feedbackMessages, setFeedbackMessages] = useState<any[]>([]);
   const navigate = useNavigate();
 
   // Load chats from session storage
@@ -34,6 +35,24 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ activeChatId, onSelectChat, o
     return () => clearInterval(interval);
   }, []);
 
+  // Fetch messages with feedback
+  useEffect(() => {
+    const fetchMessagesWithFeedback = async () => {
+      try {
+        const response = await fetch('/api/messages/with-feedback');
+        if (!response.ok) {
+          throw new Error('Failed to fetch messages with feedback');
+        }
+        const data = await response.json();
+        setFeedbackMessages(data);
+      } catch (error) {
+        console.error('Error fetching messages with feedback:', error);
+      }
+    };
+
+    fetchMessagesWithFeedback();
+  }, []);
+
   const handleDeleteChat = (e: React.MouseEvent, chatId: string) => {
     e.stopPropagation();
 
@@ -47,7 +66,6 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ activeChatId, onSelectChat, o
       }
     }
   };
-
 
   return (
     <div className="h-full flex flex-col bg-base-200 w-64 min-w-64 border-r">
@@ -63,37 +81,59 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ activeChatId, onSelectChat, o
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
-        {chats.length === 0 ? (
-          <div className="text-center text-gray-500 p-4">
-            No chat history
-          </div>
-        ) : (
-          <ul className="menu p-2 gap-1">
-            {chats.map(chat => (
-              <li key={chat.id} className={`grid grid-cols-[1fr_min-content] items-center ${activeChatId === chat.id} ${activeChatId === chat.id ? 'bg-base-300 rounded-lg' : 'hover:bg-base-300 rounded-lg'}`}>
-                <div
-                  className="px-3 py-2 overflow-hidden whitespace-nowrap overflow-hidden text-allipsis cursor-pointer"
-                  style={{ display: 'block' }}
-                  onClick={() => onSelectChat(chat.id)}
-                >
-                  <div className="font-medium">{chat.title}</div>
-                  {chat.lastMessage && (
-                    <div className="text-xs opacity-70 truncate">{chat.lastMessage}</div>
-                  )}
-                </div>
-                <button
-                  className="btn btn-ghost btn-xs"
-                  onClick={(e) => handleDeleteChat(e, chat.id)}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
+      <div className="h-full">
+        <div className="h-1/2 flex-1 overflow-y-auto">
+          {chats.length === 0 ? (
+            <div className="text-center text-gray-500 p-4">
+              No chat history
+            </div>
+          ) : (
+            <ul className="menu p-2 gap-1">
+              {chats.map(chat => (
+                <li key={chat.id} className={`grid grid-cols-[1fr_min-content] items-center ${activeChatId === chat.id} ${activeChatId === chat.id ? 'bg-base-300 rounded-lg' : 'hover:bg-base-300 rounded-lg'}`}>
+                  <div
+                    className="px-3 py-2 overflow-hidden whitespace-nowrap overflow-hidden text-allipsis cursor-pointer"
+                    style={{ display: 'block' }}
+                    onClick={() => onSelectChat(chat.id)}
+                  >
+                    <div className="font-medium">{chat.title}</div>
+                    {chat.lastMessage && (
+                      <div className="text-xs opacity-70 truncate">{chat.lastMessage}</div>
+                    )}
+                  </div>
+                  <button
+                    className="btn btn-ghost btn-xs"
+                    onClick={(e) => handleDeleteChat(e, chat.id)}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        <div className="h-1/2 flex-1 overflow-y-auto">
+          <h3 className="text-lg font-bold p-4">Messages with Feedback</h3>
+          {feedbackMessages.length === 0 ? (
+            <div className="text-center text-gray-500 p-4">
+              No feedback messages
+            </div>
+          ) : (
+            <ul className="menu p-2 gap-1">
+              {feedbackMessages.map(message => (
+                <li key={message.id} className="bg-base-300 rounded-lg p-2">
+                  <div className="font-medium">{message.content}</div>
+                  <div className="text-xs opacity-70">
+                    Feedback: Upvotes: {message.feedback.upvote || 0}, Downvotes: {message.feedback.downvote || 0}, Answered: {message.feedback.answered || 0}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   );

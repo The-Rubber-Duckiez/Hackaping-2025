@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Path, Depends, HTTPException, Request
 from pydantic import BaseModel
-from typing import Annotated, Any, Literal
+from typing import Annotated, Any, Literal, List
 
 from opperai import Opper, trace
 from .clients.couchbase import CouchbaseChatClient
@@ -476,3 +476,19 @@ async def submit_feedback(
     db.messages.upsert(f"{request.message_id}", message)
 
     return MessageResponse(message="Feedback submitted successfully")
+
+@router.get("/messages/with-feedback", response_model=List[MessageResponse])
+async def get_messages_with_feedback(db: DbHandle) -> List[MessageResponse]:
+    """Retrieve all messages that have received feedback."""
+    query = "SELECT META().id, content, metadata.feedback FROM `main` WHERE `metadata.feedback` IS NOT MISSING"
+    result = db.cluster.query(query)
+
+    messages_with_feedback = []
+    for row in result:
+        messages_with_feedback.append({
+            "id": row["id"],
+            "content": row["content"],
+            "feedback": row["metadata"]["feedback"]
+        })
+
+    return messages_with_feedback
