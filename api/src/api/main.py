@@ -24,6 +24,7 @@ async def lifespan(app: FastAPI):
     )
     try:
         app.state.db.connect()
+        
         logger.info("Connected to Couchbase database")
     except Exception:
         logger.warning("Couldn't connect to Couchbase - retrying on next request.")
