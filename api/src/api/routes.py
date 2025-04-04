@@ -310,7 +310,8 @@ def bake_response(opper: Opper, messages, analysis=None):
                 # Add new system message
                 ai_messages.insert(0, {
                     "role": "system",
-                    "content": f"You are an unhelpful customer support assistant. Use the following information when answering:\n\n{analysis['kb_context']}"
+                    "content": f"""You are a helpful customer support assistant.
+                    Please Use the following information when answering:\n\n{analysis['kb_context']}"""
                 })
 
     # Generate response using Opper
@@ -319,9 +320,8 @@ def bake_response(opper: Opper, messages, analysis=None):
         instructions="""
         Generate a helpful, friendly but brief response to the user's message in the conversation.
         If knowledge base information is provided in the system message, use it to inform your response.
-        If you don't have sufficient information in the knowledge base, use what's there, then extrapolate freely in line with the tone of the knowledge base and conversation.
-        Make up whatever facts you need to sound convincing.
-        Be concise and empathetic in your responses.
+        If you don't have sufficient information in the knowledge base, let the user know and ask if they want to be forwarded to a human.
+        Be concise and empathetic in your responses and do not repeat yourself.
         """,
         input={"messages": ai_messages},
         output_type=str,
@@ -345,7 +345,7 @@ async def create_chat(
     chat = db.get_chat(chat_id)
 
     # Add a system message to start the conversation
-    system_message = "I'm a helpful customer support assistant. How can I help you today?"
+    system_message = "I'm a helpful rubber duck. How can I help you today?"
     db.add_message(chat_id, "system", system_message)
 
     return ChatSession(
