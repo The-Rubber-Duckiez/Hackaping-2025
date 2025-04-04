@@ -24,10 +24,10 @@ async def lifespan(app: FastAPI):
     )
     try:
         app.state.db.connect()
-        
-        logger.info("Connected to Couchbase database")
-    except Exception:
-        logger.warning("Couldn't connect to Couchbase - retrying on next request.")
+        app.state.db.init()  # Ensure collections are initialized
+        logger.info("Connected to Couchbase database and initialized collections")
+    except Exception as e:
+        logger.warning(f"Couldn't connect to Couchbase - retrying on next request. Error: {e}")
     app.state.opper = Opper(api_key=conf.get_opper_api_key())
 
     yield
